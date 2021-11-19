@@ -19,11 +19,10 @@ fun part_one(passwords: MutableList<List<String>>) {
 fun part_two(passwords: MutableList<List<String>>) {
     var sum = 0
     passwords.forEach { p ->
-        val first = p[3][p[0].toInt()-1]
-        val last = p[3][p[1].toInt()-1]
-        val n = p[2][0]
+        val first = p[3][p[0].toInt()-1] == p[2][0]
+        val last = p[3][p[1].toInt()-1] == p[2][0]
         
-        if ((first == n) xor (last == n)) sum++
+        if (first xor last) sum++
     }.also{ println(sum) }
 }
 
