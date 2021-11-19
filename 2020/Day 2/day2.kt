@@ -9,21 +9,21 @@ fun main() {
 
 
 fun part_one(passwords: MutableList<List<String>>) {
-    var sum = 0
+    var counter = 0
     passwords.forEach { p ->
-        if (p[3].filter { it == p[2][0] }.count() in p[0].toInt()..p[1].toInt()) sum++
-    }.also{ println(sum) }
+        if (p[3].filter { it == p[2][0] }.count() in p[0].toInt()..p[1].toInt()) counter++
+    }.also{ println(counter) }
 }
 
 
 fun part_two(passwords: MutableList<List<String>>) {
-    var sum = 0
+    var counter = 0
     passwords.forEach { p ->
         val first = p[3][p[0].toInt()-1] == p[2][0]
         val last = p[3][p[1].toInt()-1] == p[2][0]
         
-        if (first xor last) sum++
-    }.also{ println(sum) }
+        if (first xor last) counter++
+    }.also{ println(counter) }
 }
 
 
