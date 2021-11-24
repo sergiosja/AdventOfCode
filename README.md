@@ -6,4 +6,4 @@ This is not at all meant to be a repo of amazing code, quite the contrary, I wil
 
 ***tl;dr*** the code will be clunky but I will have fun😄
 
-I will attach a README with every puzzle to explain my thought process, inspired by my friend [Sarek](https://github.com/sarsko)😁
+I will attach a README with every puzzle to briefly explain my thought process, inspired by my friend [Sarek](https://github.com/sarsko)😁
