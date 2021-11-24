@@ -10,3 +10,5 @@ For part one, go through the input and add the keys to a HashSet. If you hit a l
 For part two, I wrote the worst code I ever have, so many nested for-loops. I basically hard-coded the whole problem. The worst part? When I ran the code, I got the wrong answer.
 
 Therefore I have decided to learn as little regEx as possible, go back and solve both with regEx.
+
+Change in plans! Apparently Perl is an excellent choice for this sort of task, because regEx is literally built into the language. Therefore, I have decided I will solve this task in Perl. First, I must learn Perl.
