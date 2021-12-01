@@ -7,4 +7,4 @@ The input description smelles like roses and binary search. Simple binary search
 
 Part 1 is O(n log n), because you have to binary search through all the boarding passes.
 
-Part 2 is O(n), we just iterate from min to max and break when we find the missing number.
+Part 2 is O(n), we just iterate from min to max and eventually print the missing number.
