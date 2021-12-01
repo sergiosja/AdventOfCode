@@ -1,4 +1,7 @@
-(load "input.scm")
+(load "read_input.scm")
+
+
+(define input (read-lines "input.txt"))
 
 ; Part 1
 (define (solver lst)
@@ -17,8 +20,4 @@
       (cons (+ (car lst) (cadr lst) (caddr lst))
             (helper (cdr lst)))))
 
-(solver (helpr input))
-
-
-
-
+(solver (helper input))
