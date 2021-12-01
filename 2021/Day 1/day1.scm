@@ -18,7 +18,3 @@
             (helper (cdr lst)))))
 
 (solver (helpr input))
-
-
-
-
