@@ -24,9 +24,6 @@ def main():
     print(max(s))
 
     # Part 2
-    for i in range(min(s), max(s)):
-        if i not in s:
-            print(i)
-            break
+    print((set(range(min(s), max(s))) - s).pop())
 
 main()
