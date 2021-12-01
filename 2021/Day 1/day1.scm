@@ -20,4 +20,8 @@
       (cons (+ (car lst) (cadr lst) (caddr lst))
             (helper (cdr lst)))))
 
+<<<<<<< HEAD
 (solver (helper input))
+=======
+(solver (helper input))
+>>>>>>> 9d2ad360a642e1280e805cbb15b90e723feda4ba
