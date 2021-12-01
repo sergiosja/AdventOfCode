@@ -17,4 +17,4 @@
       (cons (+ (car lst) (cadr lst) (caddr lst))
             (helper (cdr lst)))))
 
-(solver (helpr input))
+(solver (helper input))
