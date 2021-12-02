@@ -1,4 +1,12 @@
-(load "read_input.scm")
+; Read input to list
+(define (read-lines filename)
+  (define (inner port)
+    (let ((val (read port)))
+      (if (eof-object? val)
+        '()
+        (cons val (inner port)))))
+  (let* ((file (open-input-file filename)))
+    (inner file)))
 
 
 (define input (read-lines "input.txt"))
