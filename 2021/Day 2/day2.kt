@@ -6,17 +6,13 @@ fun main() {
     var aim = 0
 
     for (dir in readFile("input.txt")) {
-        if (dir.first == "down") {
-            depth += dir.second
-        }
-
-        if (dir.first == "up") {
-            depth -= dir.second
-        }
-
-        if (dir.first == "forward") {
-            pos += dir.second
-            aim += depth * dir.second
+        when (dir.first) {
+            "up" -> depth -= dir.second
+            "down" -> depth += dir.second
+            "forward" -> {
+                pos += dir.second
+                aim += depth * dir.second
+            }
         }
     }
 
