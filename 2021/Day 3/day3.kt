@@ -41,8 +41,7 @@ fun partTwo(lsr: String, counter: Int, main: MutableSet<String>, a: MutableSet<S
         newmain = if (a.size < b.size) a else b
 
     if (newmain.size == 1)
-        for (i in newmain)
-            return i.toInt(2)
+        return newmain.toMutableList().removeAt(0).toInt(2)
 
     return partTwo(lsr, counter+1, newmain, mutableSetOf<String>(), mutableSetOf<String>())
 }
