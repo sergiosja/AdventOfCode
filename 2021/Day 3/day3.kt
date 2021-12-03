@@ -3,7 +3,8 @@ val input = readFile("input.txt")
 
 fun main() {
     println(partOne())
-    println(partTwo("oxygen") * partTwo("co2"))
+    println(partTwo("oxygen", 0, input.toMutableSet(), mutableSetOf<String>(), mutableSetOf<String>())
+          * partTwo("co2", 0, input.toMutableSet(), mutableSetOf<String>(), mutableSetOf<String>()))
 }
 
 
@@ -16,42 +17,34 @@ fun partOne(): Int {
         for (d in 0..i.length-1)
             nums[d] += if (i[d] == '1') 1 else -1
 
-    for (i in nums) gamma += if (i > 0) "1" else "0"
-    for (i in gamma) epsilon += if (i == '0') "1" else "0"
+    for (i in nums)
+        gamma += if (i > 0) "1" else "0"
+
+    for (i in gamma)
+        epsilon += if (i == '0') "1" else "0"
 
     return gamma.toInt(2) * epsilon.toInt(2)
 }
 
 
-fun partTwo(lsr: String): Int {
-    var main = input.toMutableSet()
-    var a = mutableSetOf<String>()
-    var b = mutableSetOf<String>()
-    var counter = 0
+fun partTwo(lsr: String, counter: Int, main: MutableSet<String>, a: MutableSet<String>, b: MutableSet<String>): Int {
+    for (seq in main)
+        if (seq[counter] == '1')
+            a.add(seq)
+        else
+            b.add(seq)
 
-    while (true) {
-        if (counter > 0) {
-            if (lsr == "oxygen")
-                main = if (a.size >= b.size) a else b
-            else
-                main = if (a.size < b.size) a else b
+    var newmain: MutableSet<String>?
+    if (lsr == "oxygen")
+        newmain = if (a.size >= b.size) a else b
+    else
+        newmain = if (a.size < b.size) a else b
 
-            if (main.size == 1)
-                for (i in main)
-                    return i.toInt(2)
-        }
+    if (newmain.size == 1)
+        for (i in newmain)
+            return i.toInt(2)
 
-        a = mutableSetOf<String>()
-        b = mutableSetOf<String>()
-
-        for (seq in main)
-            if (seq[counter] == '1')
-                a.add(seq)
-            else
-                b.add(seq)
-        
-        counter += 1
-    }
+    return partTwo(lsr, counter+1, newmain, mutableSetOf<String>(), mutableSetOf<String>())
 }
 
 
