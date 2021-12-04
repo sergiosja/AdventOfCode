@@ -50,19 +50,18 @@ def main():
             if n in b.board:
                 b.board = ['M' if x == n else x for x in b.board]
 
-            if not winners:
-                # Part 1
-                if b.checkWinner():
-                    print(b.getSum() * int(n))
-                    winners.append(b)
-            else:
-                # Part 2
-                if b.checkWinner() and b not in winners:
-                    winners.append(b)
+            # Part 1
+            if not winners and b.checkWinner():
+                print(b.getSum() * int(n))
+                winners.append(b)
 
-                    if len(boards) == len(winners):
-                        print(b.getSum() * int(n))
-                        return
+            # Part 2
+            if b.checkWinner() and b not in winners:
+                winners.append(b)
+
+                if len(boards) == len(winners):
+                    print(b.getSum() * int(n))
+                    return
 
 
 if __name__ == "__main__":
