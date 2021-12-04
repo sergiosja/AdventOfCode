@@ -3,8 +3,8 @@ val input = readFile("input.txt")
 
 fun main() {
     println(partOne())
-    println(partTwo("oxygen", 0, input.toMutableSet(), mutableSetOf<String>(), mutableSetOf<String>())
-          * partTwo("co2", 0, input.toMutableSet(), mutableSetOf<String>(), mutableSetOf<String>()))
+    println(partTwo("oxygen", 0, input.toMutableList(), mutableListOf<String>(), mutableListOf<String>())
+          * partTwo("co2", 0, input.toMutableList(), mutableListOf<String>(), mutableListOf<String>()))
 }
 
 
@@ -27,23 +27,23 @@ fun partOne(): Int {
 }
 
 
-fun partTwo(lsr: String, counter: Int, main: MutableSet<String>, a: MutableSet<String>, b: MutableSet<String>): Int {
+fun partTwo(lsr: String, counter: Int, main: MutableList<String>, a: MutableList<String>, b: MutableList<String>): Int {
     for (seq in main)
         if (seq[counter] == '1')
             a.add(seq)
         else
             b.add(seq)
 
-    var newmain: MutableSet<String>?
+    var newmain: MutableList<String>?
     if (lsr == "oxygen")
         newmain = if (a.size >= b.size) a else b
     else
         newmain = if (a.size < b.size) a else b
 
     if (newmain.size == 1)
-        return newmain.toMutableList().removeAt(0).toInt(2)
+        return newmain[0].toInt(2)
 
-    return partTwo(lsr, counter+1, newmain, mutableSetOf<String>(), mutableSetOf<String>())
+    return partTwo(lsr, counter+1, newmain, mutableListOf<String>(), mutableListOf<String>())
 }
 
 
