@@ -6,4 +6,5 @@ A little summary of each day :slightly_smiling_face:
 - [Day 3](/2021/Day%203) - Kotlin, recursion
 - [Day 4](/2021/Day%204) - Python, OOP
 - [Day 5](/2021/Day%205) - Python, matrix stuff
-- Day 6 - TBD
+- [Day 6](/2021/Day%206) - Kotlin, dynamic programming
+- Day 7 - TBD
