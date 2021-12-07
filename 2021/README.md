@@ -7,4 +7,4 @@ A little summary of each day :slightly_smiling_face:
 - [Day 4](/2021/Day%204) - Python, OOP
 - [Day 5](/2021/Day%205) - Python, matrix stuff
 - [Day 6](/2021/Day%206) - Kotlin, dynamic programming
-- Day 7 - TBD
+- [Day 7](/2021/Day%207) - Kotlin, maths
