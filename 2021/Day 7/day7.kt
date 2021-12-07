@@ -9,23 +9,8 @@ fun main() {
 
     // Part 2
     val mv = Math.floor((crabs.sum()/crabs.size).toDouble())
-    var mc = 0
-    for (i in 0..crabs.size-1) {
-        var c = 0
-        var ec = 0
-        while (crabs[i] < mv) {
-            crabs[i]++
-            ec++
-            c += ec
-        }
-        while (crabs[i] > mv) {
-            crabs[i]--
-            ec++
-            c += ec
-        }
-        mc += c
-    }
-    println(mc)
+    val move: (Double) -> Int = { n -> (n*(n+1)/2).toInt() }
+    println(crabs.map{ move(Math.abs(it - mv)) }.sum())
 }
 
 
