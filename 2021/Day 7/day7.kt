@@ -9,8 +9,7 @@ fun main() {
 
     // Part 2
     val mv = Math.floor((crabs.sum()/crabs.size).toDouble())
-    val move: (Double) -> Int = { n -> (n*(n+1)/2).toInt() }
-    println(crabs.map{ move(Math.abs(it - mv)) }.sum())
+    println(crabs.map{ (0..Math.abs(it - mv).toInt()).sum() }.sum())
 }
 
 
