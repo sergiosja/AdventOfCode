@@ -70,8 +70,8 @@ fun partTwo(): Int {
 }
 
 
-fun findDigits(input: List<String>): Pair<MutableMap<Int, MutableList<String>>, Array<String>> {
-    val groups = mutableMapOf(5 to mutableListOf<String>(), 6 to mutableListOf<String>())
+fun findDigits(input: List<String>): Pair<Map<Int, MutableList<String>>, Array<String>> {
+    val groups = mapOf(5 to mutableListOf<String>(), 6 to mutableListOf<String>())
     val digits = Array<String>(10){""}
 
     for (i in input[0].split(" ")) {
