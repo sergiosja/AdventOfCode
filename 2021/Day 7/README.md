@@ -1,8 +1,8 @@
 # Day 7
-Todays puzzle was a simple if you know basic maths, and the two numbers you needed were the *median* and *mean* of the crabs' locations. Relatively straight forward, but it's not actually a perfect algorithm for finding the mean. For the example input I used Math.ceil, while for the *actual* input I used Math.floor. There is probably a better way.
+Todays puzzle was all about maths, and the two numbers you needed were the *median* and *mean* of the crabs' locations. Relatively straight forward, but it's not actually a perfect algorithm for finding the mean. For the example input I used Math.ceil, while for the *actual* input I used Math.floor. There is probably a better way.
 
 ## The solution
-Very satisfied with todays solutions, higher order functions really do make life easier :slightly_smiling_face:
+Very satisfied with today's solutions, higher order functions really do make life easier :slightly_smiling_face:
 
 For part 1, get the sum of abs(location_of_crab - median) for every crab in the list, a quite straight forward and succinct O(n) solution.
 
