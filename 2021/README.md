@@ -9,3 +9,4 @@ A little summary of each day :slightly_smiling_face:
 - [Day 6](/2021/Day%206) - Kotlin, simulation ish
 - [Day 7](/2021/Day%207) - Kotlin, maths
 - [Day 8](/2021/Day%208) - Kotlin, pattern matching
+- [Day 9](/2021/Day%209) - Kotlin, try-catch heaven
