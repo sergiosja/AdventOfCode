@@ -10,3 +10,4 @@ A little summary of each day :slightly_smiling_face:
 - [Day 7](/2021/Day%207) - Kotlin, maths
 - [Day 8](/2021/Day%208) - Kotlin, pattern matching
 - [Day 9](/2021/Day%209) - Kotlin, try-catch heaven
+- [Day 10](/2021/Day%2010) - Kotlin, stacks and queues may break my booes...
