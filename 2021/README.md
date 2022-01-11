@@ -9,5 +9,7 @@ A little summary of each day :slightly_smiling_face:
 - [Day 6](/2021/Day%206) - Kotlin, simulation ish
 - [Day 7](/2021/Day%207) - Kotlin, maths
 - [Day 8](/2021/Day%208) - Kotlin, pattern matching
-- [Day 9](/2021/Day%209) - Kotlin, try-catch heaven
-- [Day 10](/2021/Day%2010) - Kotlin, stacks and queues may break my booes...
+- [Day 9](/2021/Day%209) - Kotlin, try-catch heaven, DFS
+- [Day 10](/2021/Day%2010) - Kotlin, stacks and stones may break my bones...
+- [Day 11](/2021/Day%2011) - Kotlin, simulation, recursion
+- [Day 12](/2021/Day%2012) - Prolog, *not done*
