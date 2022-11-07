@@ -1,6 +1,6 @@
-# Summary of 2021
+# Advent of Code 2021
 
-A little summary of each day :slightly_smiling_face:
+An overview of each day :slightly_smiling_face:
 
 - [Day 1](/2021/Day%201) - Scheme
 - [Day 2](/2021/Day%202) - Scheme
