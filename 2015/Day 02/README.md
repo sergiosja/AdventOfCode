@@ -1,6 +1,6 @@
 # Day 2
 
-Been learning Scala for a couple of days through [this gem of a book](https://www.manning.com/books/functional-programming-in-scala) and figured I might as well attepmt some puzzles simultaneously. As Kattis don't allow Scala (yet) I figured AOC would be my best bet. Might as well get some practice before AOC22 kicks off :smiley:
+Been learning Scala for a couple of days through [this gem of a book](https://www.manning.com/books/functional-programming-in-scala) and figured I might as well attempt some puzzles simultaneously. As Kattis doesn't allow Scala (yet) I figured AOC would be my best bet. Might as well get some practice before AOC22 kicks off :smiley:
 
 # The solution
 
