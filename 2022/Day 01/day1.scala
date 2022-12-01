@@ -14,8 +14,6 @@ def groupElfCalories(input: List[String]): List[List[Int]] =
     def loop(input: List[String], tmp: List[Int], acc: List[List[Int]]): List[List[Int]] =
         input match
             case Nil => acc
-            case head :: tail =>
-                head match
-                    case "" => loop(input.tail, List[Int](), tmp::acc)
-                    case a => loop(input.tail, a.toInt::tmp, acc)
+            case "" :: _ => loop(input.tail, List[Int](), tmp::acc)
+            case a :: _ => loop(input.tail, a.toInt::tmp, acc)
     loop(input, List[Int](), List[List[Int]]())
