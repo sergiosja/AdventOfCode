@@ -2,4 +2,4 @@
 
 An overview of each day :slightly_smiling_face:
 
-- [Day 1](/2022/Day%201) - Scala
+- [Day 1](/2022/Day%2001) - Scala
