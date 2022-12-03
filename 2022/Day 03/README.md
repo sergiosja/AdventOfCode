@@ -24,8 +24,8 @@ input.foldLeft(0)((x, y) => x + setPri(findItem(part(y))))
 To my surprise part 2 was less hassle than part 1, much thanks to Scala's grouping function. Now I just needed to find the badges
 
 ```scala
-def findBadge(l: List[String]): Int =
-    (l(0) intersect l(1) intersect l(2)).head
+def findBadge(xs: List[String]): Int =
+    (xs(0) intersect xs(1) intersect xs(2)).head
 ```
 
 and fold

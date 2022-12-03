@@ -14,8 +14,8 @@ def part(s: String): (String, String) =
 def findItem(xs: (String, String)): Int =
     (xs(0) intersect xs(1)).head
 
-def findBadge(l: List[String]): Int =
-    (l(0) intersect l(1) intersect l(2)).head
+def findBadge(xs: List[String]): Int =
+    (xs(0) intersect xs(1) intersect xs(2)).head
 
 def setPri(x: Int): Int =
     if x >= 97 then x-96 else x-38
