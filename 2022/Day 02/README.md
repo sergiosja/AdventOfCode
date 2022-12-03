@@ -2,7 +2,7 @@
 
 Quite happy with the final result and that I'm still able to do these in Scala
 
-## The solution
+## Solution
 
 After messing about with multiple maps, a friend of mine made me aware of the games pattern. Converted a list on the form ["elf's move player's move"] with this
 

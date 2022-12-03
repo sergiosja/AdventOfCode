@@ -1,5 +1,4 @@
 import scala.io.Source
-import scala.annotation.tailrec
 
 def main(args: Array[String]): Unit =
     val input = readInput("input.txt")
