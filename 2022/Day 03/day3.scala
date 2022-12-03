@@ -2,8 +2,8 @@ import scala.io.Source
 
 def main(args: Array[String]): Unit =
     val input = readInput("input.txt")
-    println(input.foldLeft(0)((x, y) => x + setPri(findItem(part(y)))))
-    println(input.grouped(3).foldLeft(0)((x, y) => x + setPri(findBadge(y))))
+    println(input.map(x => setPri(findItem(part(x)))).sum)
+    println(input.grouped(3).map(x => setPri(findBadge(x))).sum)
 
 def readInput(filename: String): List[String] =
     Source.fromFile(filename).getLines.toList

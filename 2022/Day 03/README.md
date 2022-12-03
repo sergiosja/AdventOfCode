@@ -15,10 +15,12 @@ def setPri(x: Int): Int =
     if x >= 97 then x-96 else x-38
 ```
 
-Finding the sum was then trivial
+To find the sum I then mapped each string to their common item's priority, and retrieved their sum
 
 ```scala
-input.foldLeft(0)((x, y) => x + setPri(findItem(part(y))))
+input
+  .map(x => setPri(findItem(part(x))))
+  .sum
 ```
 
 To my surprise part 2 was less hassle than part 1, much thanks to Scala's grouping function. Now I just needed to find the badges
@@ -28,8 +30,11 @@ def findBadge(xs: List[String]): Int =
     (xs(0) intersect xs(1) intersect xs(2)).head
 ```
 
-and fold
+and repeat
 
 ```scala
-input.grouped(3).foldLeft(0)((x, y) => x + setPri(findBadge(y)))
+input
+  .grouped(3)
+  .map(x => setPri(findBadge(x)))
+  .sum
 ```
