@@ -1,8 +1,8 @@
 # Day 2
 
-...
+Quite happy with the final result and that I'm still able to do these in Scala
 
-## Solution
+## The solution
 
 After messing about with multiple maps, a friend of mine made me aware of the games pattern. Converted a list on the form ["elf's move player's move"] with this
 
@@ -11,28 +11,9 @@ def scoresToMap(scores: List[String]): Map[String, Int] =
     scores.zipWithIndex.map{ case (a, b) => (a, b + 1) }.toMap
 ```
 
-Wanted to run fold/reduce/scan on the input list, but the strings got converted to the Matchable data type, so I just made a new function doing exactly what I wanted fold/reduce/scan to do
+Spent ages trying to accumulate a sum with fold, before ultimately writing my own version. After another round of google I found out foldLeft was what I needed!
 
 ```scala
-def play(input: List[String], scores: Map[String, Int]): Int =
-    @tailrec
-    def loop(input: List[String], acc: Int): Int =
-        input match
-            case Nil => acc
-            case head :: tail => loop(tail, acc + scores(head))
-    loop(input, 0)
+def play(input: List[String], strategy: Map[String, Int]): Int =
+    input.foldLeft(0)((x, y) => x + strategy(y))
 ```
-
-Finally I could run
-
-```scala
-play(input, scoresToMap(List("B X", "C Y", "A Z", "A X", "B Y", "C Z", "C X", "A Y", "B Z")))
-```
-
-on part 1, and
-
-```scala
-play(input, scoresToMap(List("B X", "C X", "A X", "A Y", "B Y", "C Y", "C Z", "A Z", "B Z")))
-```
-
-on part 2 :grin:
