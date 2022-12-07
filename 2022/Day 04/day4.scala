@@ -12,7 +12,7 @@ def sift(xs: Array[Int]): Boolean =
     xs(0) <= xs(2) && xs(1) >= xs(3) || xs(1) <= xs(3) && xs(0) >= xs(2)
 
 def fullOverlap(xs: List[Array[Int]]): Int =
-    xs.filter(x => sift(x)).size
+    xs.filter(sift).size
 
 def overlap(xs: List[Array[Int]]): Int =
     xs.filter(x => (x(0) max x(2)) <= (x(1) min x(3))).size

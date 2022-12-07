@@ -11,7 +11,7 @@ def sift(xs: Array[Int]): Boolean =
     xs(0) <= xs(2) && xs(1) >= xs(3) || xs(1) <= xs(3) && xs(0) >= xs(2)
 
 def fullOverlap(xs: List[Array[Int]]): Int =
-    xs.filter(x => sift(x)).size
+    xs.filter(sift).size
 ```
 
 Yet again part 2 was less hassle, now we just need to see if the biggest value of the set with the smallest values is larger than the smallest value of the set with the largest values
