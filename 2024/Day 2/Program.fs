@@ -15,7 +15,7 @@ let input =
 
 let part1 =
     input
-    |> List.map (fun lst -> List.pairwise lst)
+    |> List.map List.pairwise
     |> List.map (fun pairs ->
         match pairs.[0] with
         | x, y when x < y -> asc pairs
