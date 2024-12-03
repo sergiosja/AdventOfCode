@@ -13,13 +13,29 @@ let input =
     |> Array.map (fun line -> line.Split ' ' |> Array.map int |> Array.toList)
     |> Array.toList
 
-let part1 =
-    input
+let isSafe lst =
+    lst
     |> List.map List.pairwise
     |> List.map (fun pairs ->
         match pairs.[0] with
         | x, y when x < y -> asc pairs
         | x, y when x > y -> desc pairs
-        | _ -> 0)
+        | _ -> 0
+    )
+
+let part1 =
+    input
+    |> isSafe
+    |> List.sum
+    |> printfn "%d"
+
+let part2 =
+    input
+    |> List.map (fun lst ->
+        lst
+        |> List.mapi (fun i _ -> List.take i lst @ List.skip (i+1) lst)
+        |> isSafe
+        |> List.max
+    )
     |> List.sum
     |> printfn "%d"
