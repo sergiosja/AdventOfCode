@@ -6,8 +6,8 @@ My takes on some AOC puzzles. My goal is to ultimately solve puzzles from previo
 
 Year | Stars | Languages
 -----|------|---------|
-2024 | 8 ⭐ | F#
-2022 | 15 ⭐ | Scala
-2021 | 23 ⭐ | Kotlin, Scheme, Python
-2020 | 9 ⭐ | Kotlin, Prolog, Java, Python
-2015 | 7 ⭐ | Scala, Scheme
+2024 | ⭐ 8 | F#
+2022 | ⭐ 15 | Scala
+2021 | ⭐ 23 | Kotlin, Scheme, Python
+2020 | ⭐ 9 | Kotlin, Prolog, Java, Python
+2015 | ⭐ 7 | Scala, Scheme
