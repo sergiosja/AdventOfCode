@@ -9,5 +9,5 @@ Year | Stars | Languages
 [2024](https://github.com/sergiosja/AdventOfCode/tree/main/2024) | ⭐ 8 | F#
 [2022](https://github.com/sergiosja/AdventOfCode/tree/main/2022) | ⭐ 15 | Scala
 [2021](https://github.com/sergiosja/AdventOfCode/tree/main/2021) | ⭐ 23 | Kotlin, Scheme, Python
-[2020](https://github.com/sergiosja/AdventOfCode/tree/main/2020) | ⭐ 9 | Kotlin, Prolog, Java, Python
+[2020](https://github.com/sergiosja/AdventOfCode/tree/main/2020) | ⭐ 9 | Kotlin, Prolog, Python
 [2015](https://github.com/sergiosja/AdventOfCode/tree/main/2015) | ⭐ 7 | Scala, Scheme
