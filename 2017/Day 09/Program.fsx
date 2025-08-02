@@ -1,5 +1,4 @@
 open System.IO
-open System.Collections.Generic
 
 let input =
     File.ReadAllLines "input.txt"
