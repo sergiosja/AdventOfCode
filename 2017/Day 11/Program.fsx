@@ -9,8 +9,8 @@ let move (x, y, z) dir =
     match dir with
     | "nw" -> x-1,y+1,z
     | "n" -> x,y+1,z-1
-    | "ne" -> x+1,y,z-1
-    | "sw" -> x-1,y,z+1
+    | "ne" -> x+1,y+1,z
+    | "sw" -> x-1,y-1,z
     | "s" -> x,y-1,z+1
     | _ (* "se" *) -> x+1,y-1,z
 
