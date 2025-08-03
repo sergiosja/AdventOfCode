@@ -3,37 +3,45 @@ open System.IO
 let input =
     File.ReadAllLines "input.txt"
     |> Array.map (fun s -> s.Split " <-> ")
-    |> Array.map (fun s -> int s[0], s[1].Split ", " |> Array.map int |> Set.ofArray)
+    |> Array.map (fun s -> int s[0], s[1].Split ", " |> Array.map int)
 
-
-let rec findPrograms (arr : bool array) connections =
-    input
-    |> Array.iter (fun (x, set) ->
-        if arr[x] = true then
-            set |> Set.iter (fun v -> arr[v] <- true)
-        elif Set.exists (fun x -> arr[x] = true) set then
-            arr[x] <- true
-            set |> Set.iter (fun v -> arr[v] <- true)
-        else ()
+let makeGraph (xs : (int * int array) array) =
+    let graph = Array.create input.Length Set.empty
+    xs
+    |> Array.iter (fun (root, nodes) ->
+        nodes
+        |> Array.iter (fun node ->
+            graph[root] <- Set.add node graph[root]
+        )
     )
+    graph
 
-    let connections' =
-        arr
-        |> Array.filter (fun x -> x = true)
-        |> Array.length
-
-    if connections = connections' then
-        connections'
+let rec bfs (graph : int Set array) (queue : int array) (visited : int Set) =
+    if Array.isEmpty queue then
+        visited
     else
-        findPrograms arr connections'
+        let node = Array.head queue
+        if Set.contains node visited then
+            let queue' = queue |> Array.tail
+            bfs graph queue' visited
+        else
+            let visited' = Set.add node visited
+            let queue' = Array.append (queue |> Array.tail) (graph[node] |> Set.toArray)
+            bfs graph queue' visited'
 
-let part1 = 
-    let arr = Array.create input.Length false
-    arr[0] <- true
-
-    findPrograms arr 1
+let part1 =
+    bfs (makeGraph input) (Array.create 1 0) Set.empty
+    |> Set.count
     |> printfn "%d"
 
-let part2 = 1
-    // find scc
-    // if i have to make a graph anyway I might as well solve the first problem "properly" with bfs too
+let part2 =
+    let graph = makeGraph input
+
+    input
+    |> Array.map fst
+    |> Array.map (fun x ->
+        bfs graph (Array.create 1 x) Set.empty
+    )
+    |> Array.distinct
+    |> Array.length
+    |> printfn "%d"
